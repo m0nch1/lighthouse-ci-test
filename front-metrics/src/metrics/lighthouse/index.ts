@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 // Output directory of lighthouse ci result
-const directoryPath = path.join(__dirname, '../../../../front-metrics/.lighthouseci')
+const directoryPath = path.join(__dirname, '.lighthouseci')
 const jsonFileRegExp = /lhr.*\.json/
 
 const getLightHouseScoreByJson = async () => {
