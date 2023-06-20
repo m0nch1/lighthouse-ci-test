@@ -2,7 +2,7 @@
   "name": "lighthouse-ci-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
     "lighthouse": "tsx src/metrics/lighthouse/index.ts"
   },

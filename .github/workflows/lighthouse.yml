@@ -25,7 +25,7 @@ jobs:
       - name: Run Lighthouse CI
         run: |
           yarn global add @lhci/cli@0.11.x
-          lhci autorun
+          lhci collect --numberOfRuns=1 --url=https://stores-gallery.shop
 
       - name: Measure score and send data.
         run: yarn lighthouse
