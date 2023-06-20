@@ -39,7 +39,7 @@ const aggregateMetricsAndSendDataDog = async (
       throw new Error('No lighthouse score found');
     }
 
-    const metrics = aggregateMetrics(lighthouseScore);
+    const metrics = aggregateMetrics(lighthouseScore, 'retail.frontend.store');
     console.log(metrics)
     // await client.sendMetrics(metrics);
   } catch (err) {
