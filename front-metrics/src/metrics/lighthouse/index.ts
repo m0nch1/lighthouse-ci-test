@@ -1,14 +1,10 @@
 import { promises as fs } from 'fs';
-import { fileURLToPath } from 'url'
 import path from 'path'
 import { createClient, IDatadogClient } from '../lib/datadog-client';
 import { aggregateLightHouseScore, aggregateMetrics } from '../lib/aggregate'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-
 // Output directory of lighthouse ci result
-const directoryPath = path.join(__dirname, '.lighthouseci')
+const directoryPath = path.join(process.cwd(), '.lighthouseci');
 const jsonFileRegExp = /lhr.*\.json/
 
 const getLightHouseScoreByJson = async () => {
